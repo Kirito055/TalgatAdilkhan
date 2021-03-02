@@ -9,6 +9,22 @@ CREATE TABLE `javalastfinal`.`question`
     `right`       VARCHAR(255) NOT NULL,
     PRIMARY KEY (`question_id`)
 ) ENGINE = InnoDB;
+INSERT INTO `javalastfinal`.`question` (`question_id`, `question`, `answerA`, `answerB`, `answerC`, `answerD`, `right`) VALUES
+(1, 'Specify the directory name where the XML Layouts are stored', '/res/values', '/res/layout', '/res/values', '/target', '/res/layout'),
+(2, 'The root element of AndroidManifest.xml', ' service', 'app', ' manifest ', 'activity', 'manifest '),
+(3, 'What represents a single user interface screen?', 'View', 'Service', 'ViewGroup', 'Activity', 'Activity'),
+(4, 'All layout classes are a direct subclass of', 'Object', 'View', 'ViewGroup', 'AbsoluteLayout ', 'ViewGroup'),
+(5, 'A Layout that arranges its children in a single row or a single column.', 'Relative Layout', 'Frame layout', 'Linear Layout', 'Absolute Layout', 'Linear Layout'),
+(6, 'The basic building element of android user interface is called', 'View', 'ContentProvider', 'ViewGroup', 'Layout', 'View'),
+(7, 'Android is developed by', 'Android Inc', 'Apple Inc', 'Samsung', 'Google Inc ', 'Google Inc '),
+(8, 'Which daemon is used when the NameNode goes down?', 'HDFS', 'Yarn', 'DataNode', 'Secondary NameNode', 'Secondary NameNode'),
+(9, 'Which of the following method add a path or paths to the list of inputs?', 'addInputPath()', 'setInput()', 'setInputPaths()', 'addInput()', 'addInputPath()'),
+(10, 'Which of the file contains the configuration setting for HDFS daemons?', 'yarn-site.xml', 'hdfs-site.xml', ' mapred-site.xml', ' gradle-site.xml', 'hdfs-site.xml'),
+(11, 'Which configuration file is used to control the HDFS replication factor?', 'yarn-site.xml', 'mapred-site.xml', 'hdfs-site.xml', 'core-site.xml', 'hdfs-site.xml'),
+(12, 'Which of the following method used to set the output directory?', 'OutputFormat.setOutputpath()', 'FileOutputFormat.setOutputpath()', 'OutputFormat.setOutput()', 'FileOutputFormat.setOutput()', 'FileOutputFormat.setOutputpath()'),
+(13, 'Every android app must have AndroidManifest.xml file', 'True', 'False', 'I don\'t know', '', 'True'),
+(14, '________ object is used to invoke the next filter in the chain of filters?', 'Filter', 'Action', 'Config', 'FilterChain ', 'FilterChain ');
+
 CREATE TABLE `role`
 (
     `role_id` int(11) NOT NULL,

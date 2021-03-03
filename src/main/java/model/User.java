@@ -15,10 +15,10 @@ public class User {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
     private String phone;
-    private String group;
     private String gender;
-    private String major;
     private boolean enabled = true;
+    @OneToOne
+    private Group group;
 
     public long getUserId() {
         return userId;
@@ -76,13 +76,7 @@ public class User {
         this.phone = phone;
     }
 
-    public String getGroup() {
-        return group;
-    }
 
-    public void setGroup(String group) {
-        this.group = group;
-    }
 
     public String getGender() {
         return gender;
@@ -92,13 +86,7 @@ public class User {
         this.gender = gender;
     }
 
-    public String getMajor() {
-        return major;
-    }
 
-    public void setMajor(String major) {
-        this.major = major;
-    }
 
     public boolean isEnabled() {
         return enabled;

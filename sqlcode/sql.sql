@@ -84,3 +84,6 @@ CREATE TABLE `user_role` (
 
 LOCK TABLES `user_role` WRITE;
 INSERT INTO `user_role` VALUES (1,2,1),(2,3,3);
+CREATE TABLE `javalastfinal`.`question` ( `question_id` BIGINT NOT NULL , `question` VARCHAR(255) NOT NULL , `variantA` VARCHAR(255) NOT NULL , `variantB` VARCHAR(255) NOT NULL , `variantC` VARCHAR(255) NOT NULL , PRIMARY KEY (`question_id`)) ENGINE = InnoDB;
+INSERT INTO `question` (`question_id`, `question`, `variantA`, `variantB`, `variantC`) VALUES ('1', 'The Best Teacher', 'Talgat ', 'Akerke', 'Shyngys'), ('2', 'The best object', 'Java', 'Math', 'Python')
+

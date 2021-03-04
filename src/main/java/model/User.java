@@ -1,7 +1,10 @@
 package model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class User {
     @Id
@@ -20,6 +23,25 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "group_id",nullable = false)
     private Group group;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<UserRole> userRoles = new HashSet<>();
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
+    }
 
     public long getUserId() {
         return userId;

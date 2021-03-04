@@ -17,7 +17,8 @@ public class User {
     private String phone;
     private String gender;
     private boolean enabled = true;
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "group_id",nullable = false)
     private Group group;
 
     public long getUserId() {
